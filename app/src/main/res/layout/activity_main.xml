@@ -2,84 +2,54 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mndavec.myappportfolio.MainActivity">
-
-    <Button
-        android:text="GO UBIQUITOUS"
-        android:layout_height="wrap_content"
-        android:id="@+id/button7"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/button6"
-        android:layout_alignLeft="@+id/button6"
-        android:layout_alignStart="@+id/button6"
-        android:layout_width="260dp"
-        android:onClick="sendMessage" />
-
-    <Button
-        android:text="MAKE YOUR APP MATERIAL"
-        android:layout_height="wrap_content"
-        android:id="@+id/button6"
-        android:layout_below="@+id/button5"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5"
-        android:layout_marginTop="13dp"
-        android:layout_width="260dp"
-        android:onClick="sendMessage" />
+    tools:context="com.mndavec.myappportfolio.MainActivity"
+    style="@style/relative_layout_master">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Nanodegree Apps!"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/title"
+        android:text="@string/my_nanodegree_apps"
+        style="@style/text_view_basic" />
 
-    <Button
-        android:text="CAPSTONE"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/button7"
-        android:layout_alignLeft="@+id/button7"
-        android:layout_alignStart="@+id/button7"
-        android:layout_width="260dp"
-        android:onClick="sendMessage" />
+    <ScrollView style="@style/scrool_view_master">
 
-    <Button
-        android:text="Popular Movies"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:id="@+id/button"
-        android:layout_width="260dp"
-        android:onClick="sendMessage"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        <LinearLayout style="@style/linear_layout_master">
 
-    <Button
-        android:text="STOCK HAWK"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_width="260dp"
-        android:onClick="sendMessage"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+            <Button
+                android:text="@string/go_ubiquitous"
+                android:id="@+id/button7"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle"/>
 
-    <Button
-        android:text="BUILD IT BIGGER"
-        android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:layout_width="260dp"
-        android:onClick="sendMessage"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/button3"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3" />
+            <Button
+                android:text="@string/make_your_app_material"
+                android:id="@+id/button6"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle"/>
+
+            <Button
+                android:text="@string/capstone"
+                android:id="@+id/button2"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle"/>
+
+            <Button
+                android:text="@string/popular_movies"
+                android:id="@+id/button"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle" />
+
+            <Button
+                android:text="@string/stock_hawk"
+                android:id="@+id/button3"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle" />
+
+            <Button
+                android:text="@string/build_it_bigger"
+                android:id="@+id/button5"
+                android:onClick="sendMessage"
+                style="@style/CustomButtonStyle" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
